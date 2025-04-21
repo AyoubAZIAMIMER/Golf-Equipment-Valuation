@@ -18,7 +18,7 @@ st.markdown("Upload an image of golf equipment, and the YOLO model will identify
 # ---- Sidebar Configuration ----
 st.sidebar.header("⚙️ Model Configuration")
 confidence_value = float(st.sidebar.slider("Confidence Threshold", min_value=25, max_value=100, value=50)) / 100
-model_path = "C:/Users/Dell G3/Desktop/best.pt"
+model_path = "best.pt"
 
 # Azure OCR Configuration
 st.sidebar.header("🔍 Azure OCR Configuration")
@@ -33,10 +33,10 @@ def load_model(path):
 @st.cache_resource
 def load_p_model():
     model = xgb.Booster()
-    model.load_model("C:/Users/Dell G3/OneDrive - ECOLE SUPÉRIEURE DES INDUSTRIES DU TEXTILE ET DE L'HABILLEMENT/STAGES/STAGE 3/PRICE PREDICTION/Model/xgb_model.json")
-    ohe = joblib.load("C:/Users/Dell G3/OneDrive - ECOLE SUPÉRIEURE DES INDUSTRIES DU TEXTILE ET DE L'HABILLEMENT/STAGES/STAGE 3/PRICE PREDICTION/Model/ohe_encoder.pkl")
-    ord_enc = joblib.load("C:/Users/Dell G3/OneDrive - ECOLE SUPÉRIEURE DES INDUSTRIES DU TEXTILE ET DE L'HABILLEMENT/STAGES/STAGE 3/PRICE PREDICTION/Model/ordinal_encoder.pkl")
-    feature_cols = joblib.load("C:/Users/Dell G3/OneDrive - ECOLE SUPÉRIEURE DES INDUSTRIES DU TEXTILE ET DE L'HABILLEMENT/STAGES/STAGE 3/PRICE PREDICTION/Model/feature_columns.pkl")
+    model.load_model("xgb_model.json")
+    ohe = joblib.load("ohe_encoder.pkl")
+    ord_enc = joblib.load("ordinal_encoder.pkl")
+    feature_cols = joblib.load("feature_columns.pkl")
     return (model, ohe, ord_enc, feature_cols)
 
 xgb_model, ohe, ord_enc, feature_cols = load_p_model()
