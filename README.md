@@ -29,7 +29,7 @@ This project is ideal for golf enthusiasts, retailers, or developers interested 
 
 | **Uploaded Image** | **Detected Equipment** |
 |---------------------|-------------------------|
-| ![Uploaded Image](screenshots/uploaded_image.png) | ![Detected Equipment](screenshots/detected_image.png) |
+| ![Uploaded Image](Screenshots/uploaded_image.png) | ![Detected Equipment](Screenshots/detected_image.png) |
 
 ---
 
