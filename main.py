@@ -33,10 +33,10 @@ def load_model(path):
 @st.cache_resource
 def load_p_model():
     model = xgb.Booster()
-    model.load_model("xgb_model.json")
-    ohe = joblib.load("ohe_encoder.pkl")
-    ord_enc = joblib.load("ordinal_encoder.pkl")
-    feature_cols = joblib.load("feature_columns.pkl")
+    model.load_model("Model/xgb_model.json")
+    ohe = joblib.load("Model/ohe_encoder.pkl")
+    ord_enc = joblib.load("Model/ordinal_encoder.pkl")
+    feature_cols = joblib.load("Model/feature_columns.pkl")
     return (model, ohe, ord_enc, feature_cols)
 
 xgb_model, ohe, ord_enc, feature_cols = load_p_model()
