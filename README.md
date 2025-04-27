@@ -231,9 +231,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - **Microsoft Azure**: For Cognitive Services (Computer Vision) OCR capabilities.
 - **Streamlit**: For the intuitive web app framework.
 - **XGBoost**: For robust price prediction modeling.
-
----
-
-## 📬 Contact
-
-For questions or feedback, please open an issue on the [GitHub repository](https://github.com/your-username/golf-equipment-detection) or contact the maintainer at [your-email@example.com].
