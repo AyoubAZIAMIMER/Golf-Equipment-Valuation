@@ -1,3 +1,10 @@
+import os
+# Fix for OpenCV libGL error on Streamlit Cloud
+os.environ["OPENCV_IO_ENABLE_OPENEXR"] = "0"
+os.environ["OPENCV_IO_ENABLE_JASPER"] = "0"
+os.environ["OPENCV_VIDEOIO_PRIORITY_MSMF"] = "0"
+os.environ["OPENCV_DNN_OPENCL"] = "0"
+
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
